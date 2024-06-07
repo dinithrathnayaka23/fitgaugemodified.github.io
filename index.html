@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <title>FiT Gauge</title>
+
+    <style>
+        body {
+            background-color: #E5E4E4;
+            font-family: 'Hind', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dinith {
+            background-color: #9E9E9E;
+            text-align: center;
+            font-size: larger;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .icons-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .icons-container img {
+            width: 15%;
+            height: auto;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        button {
+            height: 50px;
+            width: 200px;
+            border-radius: 10%;
+            font-weight: bold;
+            font-size: large;
+            transition-duration: 0.4s;
+            background-color: #9E9E9E;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: white;
+        }
+
+        footer {
+            background-color: #9E9E9E;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 10px 0;
+            font-size: smaller;
+        }
+
+        footer a {
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: auto;
+            transition: width 0.3s;
+        }
+
+        .social-icons img:hover {
+            width: 45px;
+        }
+
+        @media (max-width: 768px) {
+            .icons-container img {
+                width: 30%;
+            }
+
+            button {
+                width: 100%;
+            }
+
+            footer a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .social-icons {
+                flex-direction: column;
+            }
+
+            .social-icons img {
+                width: 10vw;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.2em;
+            }
+
+            .icons-container img {
+                width: 40%;
+            }
+
+            button {
+                width: 100%;
+                font-size: medium;
+            }
+
+            .social-icons img {
+                width: 15vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dinith">
+        <h1>FiT Gauge</h1>
+    </div>
+
+    <h2>Click continue to calculate your BMI and to get a fitness summary.</h2>
+
+    <div class="icons-container">
+        <img src="https://cdn-icons-png.freepik.com/512/4244/4244621.png" alt="Malnutrition icon" class="geeth">
+        <img src="https://cdn-icons-png.flaticon.com/512/4729/4729230.png" alt="Fitness icon" class="din">
+        <img src="https://cdn-icons-png.flaticon.com/512/5167/5167035.png" alt="Obesity icon" class="anu">
+    </div>
+
+    <div class="button">
+        <a href="pages/calculator.html" target="_blank"><button>CONTINUE</button></a>
+    </div>
+
+    <footer>
+        <p>&copy;2024 FiT Gauge LTD All rights reserved</p>
+        <a href="pages/about.html" class="dum" target="_blank">About us</a>
+        <a href="pages/contact.html" class="aum" target="_blank">Contact us</a>
+        <a href="https://medium.com/@dinithoshada2003" class="sum" target="_blank">Blog</a>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com/dinith.rathnayaka.2003/" target="_blank"><img src="https://static-00.iconduck.com/assets.00/facebook-icon-2048x2035-fcfqjbn6.png" alt="Facebook icon" class="siyumi"></a>
+            <a href="https://www.instagram.com/dinithrathanayaka23?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="https://freepngimg.com/thumb/logo/77364-instagram-icons-computer-black-logo-white-wine.png" alt="Instagram icon" class="vishmi"></a>
+            <a href="https://www.linkedin.com/in/dinith-rathnayaka-9551442a7/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Linkedin_circle_black-512.png" alt="Linkedin icon" class="yenuli"></a>
+        </div>
+    </footer>
+</body>
+</html>

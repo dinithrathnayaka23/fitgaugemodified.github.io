@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <title>Calculate with FiT Gauge</title>
+
+    <style>
+        body {
+            background-color: #E5E4E4;
+            font-family: 'Hind', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dinith {
+            background-color: #9E9E9E;
+            text-align: center;
+            font-size: larger;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .yenuli {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .yenuli label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 1rem;
+        }
+
+        .yenuli input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .yenuli input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .yenuli input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #9E9E9E;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .yenuli input[type="button"]:hover {
+            background-color: #E5E4E4;
+            color: black;
+        }
+
+        @media (max-width: 768px) {
+            .dinith, .yenuli {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .yenuli label {
+                font-size: 0.9rem;
+            }
+
+            .yenuli input[type="text"], .yenuli input[type="button"] {
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .dinith {
+                font-size: medium;
+                padding: 10px;
+            }
+
+            .yenuli {
+                padding: 10px;
+            }
+
+            .yenuli label {
+                font-size: 0.8rem;
+            }
+
+            .yenuli input[type="text"], .yenuli input[type="button"] {
+                padding: 6px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dinith">
+        <h1>FiT Gauge</h1>
+    </div>
+
+    <div class="yenuli">
+        <form>
+            <label for="weight">Weight (kg):</label>
+            <input type="text" id="weight" name="weight" placeholder="Enter your Weight" required>
+            
+            <label for="height">Height (m):</label>
+            <input type="text" id="height" name="height" placeholder="Enter your Height" required>
+            
+            <label for="age">Age (years):</label>
+            <input type="text" id="age" name="age" placeholder="Enter your Age" required>
+            
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" required value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" required value="female">
+            <label for="female">Female</label>
+            
+            <input type="button" value="CALCULATE" class="geeth" onclick="calculate()">
+        </form>
+    </div>
+
+    <script>
+        function calculate() {
+            let weight = document.getElementById("weight").value;
+            let height = document.getElementById("height").value;
+            let BMI = weight / (height ** 2);
+            let status;
+
+            if (BMI < 18.5) {
+                status = "Underweight";
+            } else if (BMI < 22.9) {
+                status = "Normal";
+            } else if (BMI < 24.9) {
+                status = "Risk to overweight";
+            } else if (BMI < 29.9) {
+                status = "Overweight";
+            } else {
+                status = "Obese";
+            }
+
+            alert(`BMI value: ${BMI.toFixed(2)} kg/m²\nStatus: ${status}`);
+        }
+    </script>
+</body>
+
+</html>
